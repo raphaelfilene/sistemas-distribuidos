@@ -61,9 +61,9 @@ func handler(conexao net.Conn) {
     
     i, erro2 := strconv.ParseInt(dados,10, 32)
     if(erro2!= nil){}
-    numero := int(i)
+    Ni := int(i)
 
-    resultado := verificar_primo(numero)
+    resultado := verificar_primo(Ni)
 
 	escrever.Write([]byte(resultado))
 	escrever.Flush()

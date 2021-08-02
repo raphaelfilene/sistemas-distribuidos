@@ -51,7 +51,7 @@ func handler(conexao net.Conn) {
 
     switch erro {
         case nil:
-            if fluxo(dados) {}
+            if checar_fluxo(dados) {}
 
         default:
             log.Fatalf("Falha no recebimento de dados: %s", erro)
@@ -82,7 +82,7 @@ func verificar_primo(valor int) string {
     if(valor>1){return SIM} else{return NAO}
 }
 
-func fluxo(dados string) (over bool) {
+func checar_fluxo(dados string) (over bool) {
 	over = strings.HasSuffix(dados, "\r\n\r\n")
 	return
 }
